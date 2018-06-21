@@ -16,6 +16,8 @@ export class CryptoFormComponent implements OnInit {
     comments: ''
   };
 
+  todaysDate = new Date();
+
   constructor(private cryptoService: CryptoService) { }
 
   ngOnInit() {

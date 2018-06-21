@@ -9,6 +9,7 @@ import { CryptoService } from './crypto-service.service';
 
 import { FormsModule } from '@angular/forms';
 import { FormSubmittedComponent } from './form-submitted/form-submitted.component';
+import { YesNoPipe } from './yes-no.pipe';
 
 
 const routes = [
@@ -21,7 +22,8 @@ const routes = [
   declarations: [
     AppComponent,
     CryptoFormComponent,
-    FormSubmittedComponent
+    FormSubmittedComponent,
+    YesNoPipe
   ],
   imports: [
     BrowserModule,

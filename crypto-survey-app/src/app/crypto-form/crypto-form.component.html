@@ -1,3 +1,7 @@
+<div>
+  <h5>{{ todaysDate | date : 'short' }}</h5>
+</div>
+
 <div class="row">
   <div class="col-md-6">
     <label for="name" class="font-weight-bold">Name</label>
@@ -14,6 +18,16 @@
 
 <div class="row">
   <div class="col-md-12">
+    <label for="loveCrypto" class="font-wheight-bold">Do you love crypto</label>
+    <select id="loveCrypto" class="form-control">
+      <option value="true">{{ true | yesNo }}</option>
+      <option value="false">{{ false | yesNo }}</option>
+    </select>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
     <label for="comments" class="font-weight-bold">Comments</label>
     <textarea id="comments" class="form-control" [(ngModel)]="cryptoSurvey.comments"></textarea>
   </div>
@@ -21,6 +35,6 @@
 
 <div class="row mt-2">
   <div class="col-md-12">
-    <button [routerLink]="'submitted'" class="btn-outline-success btn-block" (click)="sendForm()">Send Form</button>
+    <button [routerLink]="['submitted']" class="btn-outline-success btn-block" (click)="sendForm()">Send Form</button>
   </div>
 </div>
